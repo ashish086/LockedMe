@@ -5,7 +5,7 @@ import java.text.Collator;
 import java.util.*;
 
 public class checldir {
-	public static void main(String[] args) {
+	public static void sortfiles() {
 		/* This implementation can be used for taking user input for sorting the files in ascending order
 		 * 
 		 Scanner sc = new Scanner(System.in);
@@ -15,6 +15,7 @@ public class checldir {
 		String url_dir = sc.nextLine();
 		File fileDir = new File(url_dir);
 		*/
+		
 		File fileDir = new File(".\\forcheck");
 		if(fileDir.isDirectory()){
 			List<String> listFile = Arrays.asList(fileDir.list());
@@ -40,6 +41,6 @@ public class checldir {
 			System.exit(0);
 		}
 
-	}
 
+	}
 }
