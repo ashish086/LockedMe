@@ -21,6 +21,7 @@ public class welcome_menu {
 						+ "1.Retrieve all files in Ascending order in directed folder\n"+
 				"2.File menu options(Create,delete,Search\n"+
 						"3.Exit the program");
+		System.out.println("Please enter a choice\n");
 	}
 	public static void fileoptions() {
 		System.out.println("*************************************************\n"+
@@ -28,5 +29,6 @@ public class welcome_menu {
 				"2.Delete a file from Directed folder\n"+
 				"3.Search for a file in Directed folder\n"+
 				"4.Return back to main menu");
+		System.out.println("Please enter a choice\n");
 	}
 }
