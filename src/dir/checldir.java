@@ -16,15 +16,15 @@ public class checldir {
 		File fileDir = new File(url_dir);
 		*/
 		
-		File fileDir = new File(".\\forcheck");
+		File fileDir = new File(".\\directed");
 		if(fileDir.isDirectory()){
 			List<String> listFile = Arrays.asList(fileDir.list());
 			System.out.println("The files present in the Directory are :");
 			for(String s:listFile){
 				System.out.println(s);
 			}
-			Collections.sort(listFile);
-			//Collections.sort(listFile, Collator.getInstance(Locale.ENGLISH)); 
+			//Collections.sort(listFile);
+			Collections.sort(listFile, Collator.getInstance(Locale.ENGLISH)); 
 			//The above statement can be used when we want files with lowercase letters to be 
 			//displayed before the uppercase
 			
