@@ -1,8 +1,8 @@
 package dir;
 //import java.io.BufferedWriter;
 import java.io.*;
-import java.io.FileWriter;
-import java.util.*;
+//import java.io.FileWriter;
+//import java.util.*;
 import java.io.IOException; 
 import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.*;
@@ -17,7 +17,7 @@ public class fileops  {
 				 Files.createFile(path);
 				 System.out.println(filename + " has been created successfully");
 				 System.out.println();
-				// System.out.println("Do you want to add something ")
+				
 			 }
 			 catch(FileAlreadyExistsException e) {
 				 System.err.println("already exists: " + e.getMessage());
@@ -32,10 +32,7 @@ public class fileops  {
 		           
 		  }
 	public static void deletefiles(String filename) {
-		//Scanner sc = new Scanner(System.in);
-		/*System.out.println("Enter a filename to delete");
-		System.out.println();
-		String filename = sc.nextLine();*/
+		
 		Path path = Paths.get("./directed/"+filename);
 		 try
 	        {
@@ -61,11 +58,7 @@ public class fileops  {
 		File directory = new File("./directed");
 		String[] flist = directory.list();
 		int flag = 0;
-		//Scanner sc = new Scanner(System.in);
-		/*System.out.println("Enter the file name to be searched in the directory");
-		System.out.println();
-		String searchname = sc.nextLine();
-		*/
+		
 		if (flist == null) {
             System.out.println("Empty directory.");
         }

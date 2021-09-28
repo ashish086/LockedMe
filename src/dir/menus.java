@@ -1,5 +1,4 @@
 package dir;
-import java.util.NoSuchElementException;
 import java.util.Scanner;
 public class menus {
 	public static void menuslists() {
@@ -44,9 +43,7 @@ public class menus {
 		
 		do {
 			try {
-				/*welcome_menu.fileoptions();
-				System.out.println();
-				int ch = sc.nextInt();*/
+				
 				switch(ch) {
 				case 1:
 					System.out.println("Enter the file name");
