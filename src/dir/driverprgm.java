@@ -7,6 +7,7 @@ public class driverprgm {
 		
 		//checldir.sortfiles();
 		//fileops.createfiles();
-		fileops.deletefiles();
+		//fileops.deletefiles();
+		fileops.searchfiles();
 	}
 }

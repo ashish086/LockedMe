@@ -1,12 +1,12 @@
 package dir;
 //import java.io.BufferedWriter;
-//import java.io.File;
-//import java.io.FileWriter;
+import java.io.*;
+import java.io.FileWriter;
 import java.io.IOException; 
 import java.util.Scanner;
 import java.nio.file.FileAlreadyExistsException;
 import java.nio.file.*;
-public class fileops {
+public class fileops  {
 	public static void createfiles() throws IOException{
 			Scanner sc = new Scanner(System.in);
 			System.out.println("Enter the filenemae you want to add in directed folder");
@@ -46,7 +46,7 @@ public class fileops {
 	        }
 	        catch(NoSuchFileException e)
 	        {
-	            System.out.println("No such file/directory exists");
+	            System.out.println("File Not Found(FNF)");
 	        }
 	        catch(DirectoryNotEmptyException e)
 	        {
@@ -59,6 +59,35 @@ public class fileops {
 	          
 	        System.out.println("Deletion successful.");
 	        sc.close();
+	}
+	public static void searchfiles()  {
+		File directory = new File("./directed");
+		String[] flist = directory.list();
+		int flag = 0;
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the file name to be searched in the directory");
+		System.out.println();
+		String searchname = sc.nextLine();
+		if (flist == null) {
+            System.out.println("Empty directory.");
+        }
+		else {
+			for (int i=0;i<flist.length;i++) {
+				String name = flist[i];
+				if(name.equals(searchname)) {
+					System.out.println(name+"found at :"+directory);
+					flag = 1;
+				}
+				
+			}
+		}
+		if(flag == 0) {
+			System.out.println("File not found");
+		}
+		
+		
+		sc.close();
+		
 	}
 	
 
